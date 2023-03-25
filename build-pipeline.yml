@@ -1,0 +1,13 @@
+node{
+  stage('build'){
+    sh 'python3 -V'
+  }
+  stage('test'){
+    git branch 'main', url: 'https://github.com/Ronaldosanr/Atividade-somativa.git'
+    sh 'python3 hello.py'
+  }
+  stage('deploy'){
+    echo 'Finalizado =D'
+  }
+  
+}
